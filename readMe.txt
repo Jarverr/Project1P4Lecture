@@ -1,0 +1,5 @@
+1.Uruchomienie:
+Po uruchomieniu aplikacji znajdujesz się w oknie ustawień symulacji gdzie może wpisać początkowe dla danej grupy wartości - które oznaczają liczebność początkową. Dane które przyjmują pola to liczby, jeżeli pozostawisz pole puste przyjmie ono wartość równą 0. Po wpisaniu należy nacisnąć przycisk "Start Battle" co rozpocznie symulacje.
+Inną możliwością jest pozwolenie na losowe wygenerowanie liczby osobników danej grupy w tym celu należy nacisnąć przycisk "Start battle with random values".
+2.Symulacja:
+Po uruchomieniu widzisz planszę na której wygenerowało w losowych pozycjach osobniki. Hełm - żołnierz, ludzik - człowiek, trupia ręka - zombie. Symulacja odbywa się turowo by przejść do kolejnej tury należy nacisnąć dowolny klawisz. Jeżeli chcesz podejrzeć informacje na temat danego konkrtnego osobnika należy na niego najechać kursorem wyświetlą się wtedy podstawowe informacje dotyczące danego gościa.

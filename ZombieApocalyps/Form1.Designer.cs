@@ -30,13 +30,14 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxHuman = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxZombie = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxSoldier = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxHuman = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxSoldier = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxZombie = new System.Windows.Forms.MaskedTextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,21 +63,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Podaj ilość ludzi:";
             // 
-            // textBoxHuman
-            // 
-            this.textBoxHuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxHuman.Location = new System.Drawing.Point(9, 56);
-            this.textBoxHuman.Name = "textBoxHuman";
-            this.textBoxHuman.Size = new System.Drawing.Size(180, 26);
-            this.textBoxHuman.TabIndex = 2;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBoxZombie);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBoxSoldier);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBoxHuman);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -85,14 +78,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ZombieApocalypse";
-            // 
-            // textBoxZombie
-            // 
-            this.textBoxZombie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxZombie.Location = new System.Drawing.Point(9, 204);
-            this.textBoxZombie.Name = "textBoxZombie";
-            this.textBoxZombie.Size = new System.Drawing.Size(180, 26);
-            this.textBoxZombie.TabIndex = 6;
             // 
             // label3
             // 
@@ -103,14 +88,6 @@
             this.label3.Size = new System.Drawing.Size(155, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Podaj ilość zombie:";
-            // 
-            // textBoxSoldier
-            // 
-            this.textBoxSoldier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxSoldier.Location = new System.Drawing.Point(9, 129);
-            this.textBoxSoldier.Name = "textBoxSoldier";
-            this.textBoxSoldier.Size = new System.Drawing.Size(180, 26);
-            this.textBoxSoldier.TabIndex = 4;
             // 
             // label2
             // 
@@ -133,12 +110,51 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // textBoxHuman
+            // 
+            this.textBoxHuman.Location = new System.Drawing.Point(10, 59);
+            this.textBoxHuman.Mask = "000";
+            this.textBoxHuman.Name = "textBoxHuman";
+            this.textBoxHuman.Size = new System.Drawing.Size(149, 26);
+            this.textBoxHuman.TabIndex = 7;
+            this.textBoxHuman.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSoldier
+            // 
+            this.textBoxSoldier.Location = new System.Drawing.Point(10, 132);
+            this.textBoxSoldier.Mask = "000";
+            this.textBoxSoldier.Name = "textBoxSoldier";
+            this.textBoxSoldier.Size = new System.Drawing.Size(149, 26);
+            this.textBoxSoldier.TabIndex = 8;
+            this.textBoxSoldier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxZombie
+            // 
+            this.textBoxZombie.Location = new System.Drawing.Point(10, 207);
+            this.textBoxZombie.Mask = "000";
+            this.textBoxZombie.Name = "textBoxZombie";
+            this.textBoxZombie.Size = new System.Drawing.Size(149, 26);
+            this.textBoxZombie.TabIndex = 9;
+            this.textBoxZombie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.Location = new System.Drawing.Point(12, 372);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 66);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Start Battle with random values";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
@@ -156,13 +172,14 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxHuman;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBoxZombie;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxSoldier;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox textBoxZombie;
+        private System.Windows.Forms.MaskedTextBox textBoxSoldier;
+        private System.Windows.Forms.MaskedTextBox textBoxHuman;
+        private System.Windows.Forms.Button button2;
     }
 }
 

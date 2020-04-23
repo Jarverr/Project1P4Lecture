@@ -36,7 +36,22 @@ namespace ZombieApocalyps
             battlefield.ZombiesAmount = ZombiesAmount;
             battlefield.SoldiersAmount = SoldiersAmount;
             battlefield.Show();
-          
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var rnd = new Random();
+            this.Hide();
+            var battlefield = new Battlefield()
+            {
+                HumansAmount = rnd.Next(10, 100),
+                SoldiersAmount = rnd.Next(1, 5),
+                ZombiesAmount = rnd.Next(10, 30)
+            };
+            battlefield.Closed += (s, args) => this.Close();
+
+            battlefield.Show();
         }
     }
 }

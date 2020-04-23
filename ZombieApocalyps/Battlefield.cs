@@ -153,7 +153,7 @@ namespace ZombieApocalyps
                     pictureBoxes[i].Location = new System.Drawing.Point(rnd.Next(0, 731), rnd.Next(0, 351));
                     pictureBoxes[i].Size = new System.Drawing.Size(10, 10);
                     pictureBoxes[i].SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-                    toolTips[i].SetToolTip( pictureBoxes[i], $"Id:{zombies[j].Id}\nMoney:{zombies[j].Money}\nStrength:{zombies[j].Strength}\nX:{pictureBoxes[i].Location.X}\nY:{pictureBoxes[i].Location.Y}");
+                    toolTips[i].SetToolTip( pictureBoxes[i], $"Id:{zombies[j].Id}\nMoney:{zombies[j].Money}\nStrength:{zombies[j].Strength}\nHuman Again:{zombies[j].HumanAgain}\nX:{pictureBoxes[i].Location.X}\nY:{pictureBoxes[i].Location.Y}");
                     //toolTips[i].Show($"Id:{zombies[j].Id}\nMoney:{zombies[j].Money}\nStrength:{zombies[j].Strength}\nX:{pictureBoxes[i].Location.X}\nY:{pictureBoxes[i].Location.Y}", pictureBoxes[i]);
 
                     this.Controls.Add(pictureBoxes[i]);
@@ -368,6 +368,19 @@ namespace ZombieApocalyps
                         }
                     }
                 }
+                else
+                {
+                    for (int i = 0; i < total; i++)
+                    {
+                        if (pictureBoxes[i].Name == $"Zombie{zombies[j].Id}")
+                        {
+
+                            toolTips[i].SetToolTip(pictureBoxes[i], $"Id:{zombies[j].Id}\nMoney:{zombies[j].Money}\nStrength:{zombies[j].Strength}\nHuman again:{zombies[j].HumanAgain}\nX:{pictureBoxes[i].Location.X}\nY:{pictureBoxes[i].Location.Y}");
+
+                            break;
+                        }
+                    }
+                }
             }
 
             //spotkanie zombie - człowiek
@@ -391,7 +404,7 @@ namespace ZombieApocalyps
 
                                 pictureBoxes[j].Name = $"Zombie{ZombiesAmount}";
                                 pictureBoxes[j].Image = Properties.Resources.zombieMap;
-                                toolTips[j].SetToolTip(pictureBoxes[j], $"Id:{zombies[zombiesAmountHelper].Id}\nMoney:{zombies[zombiesAmountHelper].Money}\nStrength:{zombies[zombiesAmountHelper].Strength}\nX:{pictureBoxes[j].Location.X}\nY:{pictureBoxes[j].Location.Y}");
+                                toolTips[j].SetToolTip(pictureBoxes[j], $"Id:{zombies[zombiesAmountHelper].Id}\nMoney:{zombies[zombiesAmountHelper].Money}\nStrength:{zombies[zombiesAmountHelper].Strength}\nHuman again:{zombies[zombiesAmountHelper].HumanAgain}\nX:{pictureBoxes[j].Location.X}\nY:{pictureBoxes[j].Location.Y}");
 
                                 humans.Remove(humans[i]);
                                 ZombiesAmount++;
@@ -493,7 +506,7 @@ namespace ZombieApocalyps
 
                                             pictureBoxes[j].Name = $"Zombie{ZombiesAmount}";
                                             pictureBoxes[j].Image = Properties.Resources.zombieMap;
-                                            toolTips[j].SetToolTip(pictureBoxes[j], $"Id:{zombies[zombiesAmountHelper].Id}\nMoney:{zombies[zombiesAmountHelper].Money}\nStrength:{zombies[zombiesAmountHelper].Strength}\nX:{pictureBoxes[j].Location.X}\nY:{pictureBoxes[j].Location.Y}");
+                                            toolTips[j].SetToolTip(pictureBoxes[j], $"Id:{zombies[zombiesAmountHelper].Id}\nMoney:{zombies[zombiesAmountHelper].Money}\nStrength:{zombies[zombiesAmountHelper].Strength}\nHuman again:{zombies[zombiesAmountHelper].HumanAgain}\nX:{pictureBoxes[j].Location.X}\nY:{pictureBoxes[j].Location.Y}");
                                             
                                             soldiers.Remove(soldiers[i]);
                                             ZombiesAmount++;
